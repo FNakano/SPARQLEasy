@@ -1,7 +1,7 @@
 # SPARQLEasy
 **SPARQL easy SELECT**
 
-Proposta de TCC curto.
+Proposta para TCC curto.
 
 ## Motivação
 
@@ -84,40 +84,52 @@ FILTER ( ?t >= '2022-02-25T0:00Z'^^xsd:dateTime &&  ?t <= '2022-02-25T8:00Z'^^xs
 
 A partir desta consulta, é possível generalizar que uma consulta tem um bloco que define prefixos, seguido de SELECT, seguido de uma lista de variáveis desejadas, seguido de WHERE, seguido de triplas que especificam as variáveis desejadas, seguido (ou não) de FILTER, seguido de uma especificação sobre os valores das variáveis desejadas que são de interesse, seguido por especificações de ordem de apresentação e formato de serialização.
 
-O principal entregável do projeto consiste em um programa (GUI), usável por pessoas com pouco ou nenhum conhecimento sobre DBs, SQL, SPARQL, que auxilia a construção de consultas SPARQL SELECT, com alguma capacidade de exibir diagramas ou listas como resultado.
+O principal entregável do projeto consiste em uma aplicação (GUI), usável por pessoas com pouco ou nenhum conhecimento sobre DBs, SQL, SPARQL, que auxilia a construção de consultas SPARQL SELECT, com a capacidade de exibir algum diagrama ou lista como resultado.
 
-O aplicativo deve permitir ao usuário definir quantos prefixos quiser, quantas variáveis de resultado quiser, quantas triplas de seleção (WHERE) quiser, quantas condições (LIMIT) quiser. Escolher entre ordens de apresentação e formatos de serialização possíveis/disponíveis.
+A aplicação deve permitir ao usuário:
 
-O aplicativo pode ser ou *standalone* com interface gráfica (por exemplo, Python+TkInter), ou *web* com interface através de navegador (por exemplo, Node+React).
+- definir quantos prefixos quiser, 
+- quantas variáveis de resultado quiser, 
+- quantas triplas de seleção (WHERE) quiser, 
+- quantas condições (LIMIT) quiser. 
+- Escolher entre ordens de apresentação e formatos de serialização possíveis/disponíveis.
+- salvar e carregar consultas feitas anteriormente
+   - formato de armazenamento: texto/SPARQL
+   - o usuário pode querer que a aplicação carregue uma consulta mal formada ou com elementos que (ainda) não são tratados
+    
+A aplicação pode ser ou *standalone* com interface gráfica (por exemplo, Python+TkInter), ou *web* com interface através de navegador (por exemplo, Node+React).
 
-O aplicativo deve ser expansível por novos desenvolvedores - permitir incluir mais elementos do tipo WHERE, FILTER,... ter documentados os pontos do código que precisariam ser ajustados.
+A aplicação deve ser expansível por novos desenvolvedores - permitir incluir mais elementos do tipo WHERE, FILTER,... ter documentados os pontos do código que precisariam ser ajustados.
 
 ## Sugestão de projeto da GUI
 
 **Acrescentar diagrama**
 
-## Teste de aceitação do aplicativo
+## Teste de aceitação da aplicação
 
-O aplicativo será usado para gerar consultas contra o grafo de conhecimento mantido pelos orientadores. Estas consultas serão executadas e os resultados analisados. Se os resultados forem satisfatórios, considera-se que o aplicativo passou no teste.
+A aplicação será usada para gerar consultas contra o grafo de conhecimento mantido pelos orientadores. Estas consultas serão executadas e os resultados analisados. Se os resultados forem satisfatórios, considera-se que a aplicação passou no teste.
 
 ## Entregáveis
 
 Além do teste de aceitação, deverão ser entregues:
 
-1. Programa (GUI) do Assistente para construção de consultas;
+1. Programa (GUI) da aplicação;
    - Código-fonte e executável em repositório público no github
-2. Tutorial com exemplos para usuários do Assistente;
+2. Tutorial com exemplos para usuários com instruções de instalação e uso da aplicação;
 3. Manual do desenvolvedor;
    - Referência de bibliotecas e funções usadas;
       - ex. usou-se o módulo csv2rdf a biblioteca Python RDFLib (https://rdflib.readthedocs.io/en/stable/apidocs/rdflib.tools.html#module-rdflib.tools.csv2rdf)
       - ex. a postagem: https://stackoverflow.com/questions/17144088/using-python-rdflib-how-to-include-literals-in-sparql-queries ensina como criar literais com etiqueta de linguagem usando a função `Literal`
-   - Referência de funções;
+   - Referência de funções desenvolvidas no TCC;
    - Instalação do ambiente de desenvolvimento;
-   - Arquitetura do aplicativo;
-   - Fluxograma do aplicativo;
+   - Arquitetura da aplicação;
+   - Fluxograma (ou equivalente) da aplicação;
 4. Monografia
+   - Documento mais acadêmico, contextualizando a aplicação e a necessidade de tal, com referencial científico
 
 ## Linguagens de desenvolvimento preferenciais
+
+Alternativas podem ser aceitas. O principal critério para aceitação será a facilidade para colegas darem continuidade ao projeto.
 
 Python com TkInter;
 Python com Flask ou com Django;
