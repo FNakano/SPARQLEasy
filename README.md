@@ -43,6 +43,7 @@ A informação nela contida pode ser codificada em um grafo se seguirmos algumas
 
 As triplas resultantes da aplicação das regras acima sobre o exemplo são:
 
+```
 001 `temDescrição` "ventilador marca X, potência Y,..."
 001 `temPreço` "199,00"
 002 `temDescrição` "geladeira marca W,..."
@@ -50,6 +51,8 @@ As triplas resultantes da aplicação das regras acima sobre o exemplo são:
 003 `temDescrição` "televisor marca Z, tamanho K,..."
 004 `temPreço` "1999,00"
 ...
+```
+
 
 O grafo com as classes e instâncias elicitadas é:
 
@@ -135,3 +138,8 @@ Python com TkInter;
 Python com Flask ou com Django;
 JavaScript/TypeScript com Angular ou React ou Node;
 
+## Experiência prévia que pode facilitar o desenvolvimento
+
+- Experiência com web semântica e SPARQL;
+- Experiência com bancos de dados e SQL;
+- Experiência com desenvolvimento de GUI;
