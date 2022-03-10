@@ -68,7 +68,7 @@ select ?id ?desc ?prec where {
 }
 ```
 
-## Requisitos conhecidos
+## Requisitos conhecidos para a aplicação
 
 Uma consulta SPARQL SELECT, com mais elementos sintáticos, dentro de uma requisição HTTP executada com o aplicativo `curl`, sobre um grafo criado pelos orientadores é mostrada abaixo:
 
